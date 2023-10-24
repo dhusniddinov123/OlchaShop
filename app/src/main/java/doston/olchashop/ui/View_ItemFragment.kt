@@ -21,6 +21,8 @@ private const val ARG_PARAM2 = "param2"
  * Use the [View_ItemFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
+
 class View_ItemFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: Product? = null
