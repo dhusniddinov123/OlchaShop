@@ -50,6 +50,7 @@ class CartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val binding = FragmentCardBinding.inflate(inflater,container,false)
         val user = appDatabase.getUserDao().getUser().get(appDatabase.getUserDao().getUser().size-1)
         val api = APIClient.getInstance().create(APIService::class.java)
@@ -84,8 +85,13 @@ class CartFragment : Fragment() {
 
         })
 
+
+
+
         return binding.root
     }
+
+
 
     companion object {
         /**
