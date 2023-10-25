@@ -51,10 +51,10 @@ class HomeFragment : Fragment() {
         }
 
     }
-
     val appDatabase: AppDataBase by lazy {
         AppDataBase.getInstance(requireContext())
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -121,24 +121,10 @@ class HomeFragment : Fragment() {
             parentFragmentManager.beginTransaction().replace(R.id.main,SearchFragment()).setReorderingAllowed(true).addToBackStack("Home").commit()
         }
 
-        binding.cart.setOnClickListener {
-            if (user.get(user.size-1).name == ""){
-                parentFragmentManager.beginTransaction().replace(R.id.main, LoginFragment())
-                    .addToBackStack("Home").commit()
-            }
-
-            else parentFragmentManager.beginTransaction().replace(R.id.main, CartFragment())
-                .addToBackStack("Home").commit()
 
 
 
-        }
 
-
-        binding.userImg.setOnClickListener{
-            parentFragmentManager.beginTransaction().replace(R.id
-                .main,ProfileFragment()).addToBackStack("Home").commit()
-        }
 
         binding.textView5
             .setText("Hello, "+ user.get(user.size-1).name)

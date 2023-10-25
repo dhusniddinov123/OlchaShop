@@ -155,10 +155,7 @@ class SearchFragment : Fragment() {
                             }
 
 
-                            if (searched_products.size == 0){
-                                binding.nothingLottie.visibility = View.VISIBLE
-                            }
-                            else binding.nothingLottie.visibility = View.GONE
+
                             var adapter = ProductAdapter(searched_products,object :ProductAdapter.ItemClick{
                                 override fun OnItemClick(product: Product) {
                                     parentFragmentManager.beginTransaction().replace(R.id.main,View_ItemFragment()).addToBackStack("Search").commit()

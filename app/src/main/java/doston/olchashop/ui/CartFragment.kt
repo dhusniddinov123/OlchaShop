@@ -83,9 +83,13 @@ class CartFragment : Fragment() {
                 TODO("Not yet implemented")
             }
 
+
+
         })
 
-
+        binding.back.setOnClickListener{
+            parentFragmentManager.beginTransaction().replace(R.id.frame_layout,HomeFragment()).commit()
+        }
 
 
         return binding.root
